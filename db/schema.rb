@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2022_01_08_143416) do
     t.string "title"
     t.text "description"
     t.integer "price"
-    t.datetime "created_on"
-    t.datetime "sold_on"
-    t.boolean "sold", default: false
+    t.date "rented_from"
+    t.date "rented_to"
+    t.boolean "rented", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

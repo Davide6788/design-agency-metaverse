@@ -4,9 +4,9 @@ class CreateNfts < ActiveRecord::Migration[6.1]
       t.string :title
       t.text :description
       t.integer :price
-      t.datetime :created_on
-      t.datetime :sold_on
-      t.boolean :sold, default: false
+      t.date :rented_from
+      t.date :rented_to
+      t.boolean :rented, default: false
 
       t.timestamps
     end
