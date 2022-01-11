@@ -1,9 +1,9 @@
 class NftsController < ApplicationController
-  
+
   def index
     @nft = Nft.all
   end
-  
+
   def show
     @nft = Nft.find(params[:id])
   end
@@ -14,10 +14,11 @@ class NftsController < ApplicationController
 
   def create
     @nft = Nft.new(nft_params)
-      if @nft.save
-        redirect_to nft_path(@nft)
-      else
-        render :new
+    @nft.user_id = current_user.id
+    if @nft.save
+      redirect_to nft_path(@nft)
+    else
+      render :new
     end
   end
 
@@ -30,12 +31,11 @@ class NftsController < ApplicationController
     @nft = Nft.find(params[:id])
     @nft.destroy
   end
-    
-  
+
   private
 
   def nft_params
-    params.require(:nft).permit(:title, :description, :price, :rented)
+    params.require(:nft).permit(:title, :description, :price, :rented, :category_id)
   end
 
 end
