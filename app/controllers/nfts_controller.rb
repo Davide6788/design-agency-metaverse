@@ -8,25 +8,34 @@ class NftsController < ApplicationController
     @nft = Nft.find(params[:id])
   end
 
-
   def new
     @nft = Nft.new
   end
 
   def create
     @nft = Nft.new(nft_params)
-    if @nft.save
-      redirect_to nft_path(@nft)
-    else
-      render :new
+      if @nft.save
+        redirect_to nft_path(@nft)
+      else
+        render :new
     end
   end
-  
 
+  def update
+    @nft = Nft.find(params[:id])
+    @nft.update(params[:nft])
+  end
+
+  def destroy
+    @nft = Nft.find(params[:id])
+    @nft.destroy
+  end
+    
+  
   private
 
   def nft_params
-    params.require(:list).permit(:title, :description, :price, :category_id)
+    params.require(:nft).permit(:title, :description, :price, :rented)
   end
 
 end
