@@ -6,6 +6,7 @@ class NftsController < ApplicationController
 
   def show
     @nft = Nft.find(params[:id])
+    @basket = Basket.new
   end
 
   def new
