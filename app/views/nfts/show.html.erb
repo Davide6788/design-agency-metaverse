@@ -6,4 +6,8 @@
 
 
 
+
 <%= link_to "Add to basket", new_nft_basket_path(@nft) %>
+
+<%= cl_image_tag @nft.photo.key, height: 300, width: 400, crop: :fill %>
+
