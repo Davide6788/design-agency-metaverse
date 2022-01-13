@@ -3,6 +3,6 @@ class Nft < ApplicationRecord
   has_one_attached :photo
   # validates :rented, presence: true
   # belongs_to :category
-  # belongs_to :user
-  # has_one :basket
+  belongs_to :user
+  has_one :basket
 end
