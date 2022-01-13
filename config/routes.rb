@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   resources :baskets
   resources :nfts
+
+  get 'categories/:id', to: "categories#show"
 end
