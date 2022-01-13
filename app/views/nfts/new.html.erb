@@ -5,5 +5,6 @@ test
   <%= f.input :price %>
   <%= f.input :rented %>
   <%= f.input :category_id, collection: Category.all %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Create NFT", class: "btn btn-primary" %>
 <% end %>

@@ -3,4 +3,6 @@
 <h5><%= @nft.title %></h5>
 <p><%= @nft.description %></p>
 
+<%= cl_image_tag @nft.photo.key, height: 300, width: 400, crop: :fill %>
+
 <%= link_to "Add to basket", new_basket_path(@nft) %>
