@@ -13,11 +13,11 @@ class BasketsController < ApplicationController
   end
 
   def create
-    @basket = Basket.new(basket_params)
-    @basket.user = current_user
     @nft = Nft.find(params[:nft_id])
+    @basket = Basket.new(basket_params)
     @basket.nft = @nft
-    @basket.paid = true
+    @basket.user = current_user
+    @basket.paid = false
     if @basket.save
       redirect_to basket_path(@basket)
     else
@@ -33,7 +33,7 @@ class BasketsController < ApplicationController
   private
 
   def basket_params
-    params.require(:basket).permit(:nft_id)
+    params.require(:basket).permit(:nft_id, :paid)
   end
 
 end
