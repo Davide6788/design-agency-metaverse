@@ -9,11 +9,9 @@ Rails.application.routes.draw do
     end
   end
 
-
-
   get 'categories/:id', to: "categories#show"
-  
-  resources :baskets, only: [:show, :index]
+
+  resources :baskets, only: [:show, :index, :update]
 
 
 
