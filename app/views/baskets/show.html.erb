@@ -1,9 +1,9 @@
 
-<h2>Basket's show</h2>
+<h2>My Basket </h2>
 <br>
 <%= @basket.nft.title %> <br>
 <%= @basket.nft.price %> <br>
-# #cl_image_tag @basket.nft.photo, height: 300, width: 400, crop: :fill
+
 
 <br>
 <br>
@@ -12,5 +12,3 @@
   <%= f.hidden_field :paid, value: true %>
   <%= f.submit "Pay now" %>
 <% end %>
-
-link_to "Pay", basket_path(@basket), method: :patch
