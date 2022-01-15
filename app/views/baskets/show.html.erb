@@ -3,10 +3,14 @@
 <br>
 <%= @basket.nft.title %> <br>
 <%= @basket.nft.price %> <br>
-# # cl_image_tag @basket.nft.photo, height: 300, width: 400, crop: :fill
+# #cl_image_tag @basket.nft.photo, height: 300, width: 400, crop: :fill
 
 <br>
 <br>
 
-<%= link_to "Confirm Basket and go to payment", nfts_path(@nft) %>
+<%= form_for(@basket) do |f| %>
+  <%= f.hidden_field :paid, value: true %>
+  <%= f.submit %>
+<% end %>
 
+link_to "Pay", basket_path(@basket), method: :patch
