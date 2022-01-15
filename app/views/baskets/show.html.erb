@@ -10,7 +10,7 @@
 
 <%= form_for(@basket) do |f| %>
   <%= f.hidden_field :paid, value: true %>
-  <%= f.submit %>
+  <%= f.submit "Pay now" %>
 <% end %>
 
 link_to "Pay", basket_path(@basket), method: :patch
