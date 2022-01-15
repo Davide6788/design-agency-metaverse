@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get 'categories/:id', to: "categories#show"
   
-  resources :baskets, only: [:show]
+  resources :baskets, only: [:show, :index]
+
 
   resources :nfts do
     resources :baskets, only: [:create, :new]

@@ -4,11 +4,9 @@
 <h5><%= @nft.title %></h5>
 <p><%= @nft.description %></p>
 
-
-
-
-
-<%= link_to "Add to basket", new_nft_basket_path(@nft) %>
-
 <%= cl_image_tag @nft.photo.key, height: 300, width: 400, crop: :fill %>
 
+<%= simple_form_for [@nft, @basket] do |f| %>
+        <%= f.hidden_field :paid, value: true %>
+        <%= f.submit %>
+<% end %>

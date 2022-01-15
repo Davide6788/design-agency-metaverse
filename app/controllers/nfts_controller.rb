@@ -11,6 +11,7 @@ class NftsController < ApplicationController
 
   def new
     @nft = Nft.new
+    @basket = Basket.new
   end
 
   def create
