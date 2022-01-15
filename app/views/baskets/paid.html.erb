@@ -1,5 +1,23 @@
-<ul>
-  <% @baskets.each do |basket| %>
-    <li><%= basket.id %></li>
-  <% end %>
-</ul>
+
+<div class="container nft-list-filtered-by-category">
+  <h1>
+    <%= "My Collection" %>
+  </h1>
+  <ul>
+    <div class="container nft-product-cards display-grid">
+      <% @baskets.each do |basket| %>
+        <li>
+          <div class="card-product flex-column">
+            <%= link_to nft_path(basket.nft) do %>
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <% end %>
+            <div class="card-product-infos">
+              <h2><%= link_to basket.nft.title, nft_path(basket.nft) %></h2>
+              <p>$<%= basket.nft.price %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </div>
+  </ul>
+</div>
