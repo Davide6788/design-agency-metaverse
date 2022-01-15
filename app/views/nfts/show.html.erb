@@ -1,12 +1,15 @@
-<h2>This is the NFT Show</h2>
 
 
-<h5><%= @nft.title %></h5>
-<p><%= @nft.description %></p>
 
-<%= cl_image_tag @nft.photo.key, height: 300, width: 400, crop: :fill %>
 
-<%= simple_form_for [@nft, @basket] do |f| %>
-        <%= f.hidden_field :paid, value: true %>
-        <%= f.submit "Add to my Basket" %>
-<% end %>
+<div class="container nft-list-filtered-by-category">
+  <h2><%= @nft.title %></h2>
+  <br>
+  <h2><%= @nft.description %></h2>
+  <br>
+  <%= cl_image_tag @nft.photo.key, height: 300, width: 400, crop: :fill %>
+
+  <%= simple_form_for [@nft, @basket] do |f| %>
+          <%= f.hidden_field :paid, value: true %>
+          <%= f.submit "Add to my Basket" %>
+  <% end %>
