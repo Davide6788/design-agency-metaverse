@@ -4,7 +4,9 @@ class BasketsController < ApplicationController
   end
 
   def show
-
+    # @nft = Nft.find(params[:nft_id])
+    # @basket.nft = @nft
+    @basket = Basket.find(params[:id])
   end
 
   def new

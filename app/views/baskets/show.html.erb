@@ -1,1 +1,12 @@
-<h2>The test passes!</h2>
+
+<h2>Basket's show</h2>
+<br>
+<%= @basket.nft.title %> <br>
+<%= @basket.nft.price %> <br>
+# # cl_image_tag @basket.nft.photo, height: 300, width: 400, crop: :fill
+
+<br>
+<br>
+
+<%= link_to "Confirm Basket and go to payment", nfts_path(@nft) %>
+

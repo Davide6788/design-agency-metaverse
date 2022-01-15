@@ -1,10 +1,14 @@
-test
-<%= simple_form_for [ @nft ] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :rented %>
-  <%= f.input :category_id, collection: Category.all %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Create NFT", class: "btn btn-primary" %>
-<% end %>
+
+<h2>Add your NFT</h2>
+
+<div class="container">
+  <%= simple_form_for [ @nft ] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.association :category, label_method: :category_name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Create NFT", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
