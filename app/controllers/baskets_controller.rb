@@ -3,6 +3,14 @@ class BasketsController < ApplicationController
     @baskets = Basket.all
   end
 
+  def paid
+    @baskets = Basket.where(paid: true, user_id: current_user)
+  end
+
+  def pending
+    @baskets = Basket.where(paid: false, user_id: current_user)
+  end
+
   def show
     # @nft = Nft.find(params[:nft_id])
     # @basket.nft = @nft
