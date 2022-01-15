@@ -1,5 +1,5 @@
 <div class="container nft-list-filtered-by-category">
-  <%# <h1>
+  <h1>
     <%= @category.category_name %>
   </h1>
   <ul>
@@ -7,9 +7,11 @@
       <% Nft.where(category_id: 1).each do |nft| %>
         <li>
           <div class="card-product flex-column">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <%= link_to nft_path(nft) do %>
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <% end %>
             <div class="card-product-infos">
-              <h2><%= nft.title %></h2>
+              <h2><%= link_to nft.title, nft_path(nft) %></h2>
               <p>$<%= nft.price %></p>
             </div>
           </div>

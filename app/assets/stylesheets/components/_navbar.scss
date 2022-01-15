@@ -1,6 +1,13 @@
 .navbar-lewagon {
+  background: #211f1f;
+  transition: 0.5s background-color ease;
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +16,33 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.logo {
+  width: 40px;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.basket-text {
+  width: 40px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+}
+
+.avatar {
+  display: flex;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
 }
