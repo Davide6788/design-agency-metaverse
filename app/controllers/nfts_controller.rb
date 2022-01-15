@@ -11,6 +11,7 @@ class NftsController < ApplicationController
 
   def new
     @nft = Nft.new
+    @basket = Basket.new
   end
 
   def create
@@ -36,7 +37,7 @@ class NftsController < ApplicationController
   private
 
   def nft_params
-    params.require(:nft).permit(:title, :description, :price, :rented, :category_id, :photo)
+    params.require(:nft).permit(:title, :description, :price, :category_id, :photo)
   end
 
 end
