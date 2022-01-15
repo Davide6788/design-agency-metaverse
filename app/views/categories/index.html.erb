@@ -1,1 +1,7 @@
-<h1>test for categories index</h1>
+
+<h2>Where dou you wanna start ?</h2> <br>
+
+<% @categories.each do |category| %>
+  <%= link_to category.category_name, category_path(category) %> <br>
+<% end %>
+

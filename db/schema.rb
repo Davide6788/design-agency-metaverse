@@ -63,7 +63,9 @@ ActiveRecord::Schema.define(version: 2022_01_13_183333) do
     t.string "title"
     t.text "description"
     t.integer "price"
-    t.boolean "paid", default: false
+    t.date "rented_from"
+    t.date "rented_to"
+    t.boolean "rented", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "category_id", null: false
