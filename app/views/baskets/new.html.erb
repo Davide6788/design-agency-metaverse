@@ -1,3 +1,4 @@
-<%= simple_form_for [@user, @basket] do |f| %>
+<%= simple_form_for([@nft, @basket], method: :post, url: nft_baskets_path) do |f| %>
+        <%= f.hidden_field :paid, value: true %>
         <%= f.submit %>
 <% end %>
