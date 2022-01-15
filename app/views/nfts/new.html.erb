@@ -4,7 +4,11 @@ test
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :rented %>
-  <%= f.input :category_id, collection: Category.all %>
+  <select name="category[category]">
+    <% Category.all.each do |category| %>
+      <option value=<%= category.id %>><%= category.category_name %></option>
+    <% end %>
+  </select>
   <%= f.input :photo, as: :file %>
   <%= f.submit "Create NFT", class: "btn btn-primary" %>
 <% end %>
