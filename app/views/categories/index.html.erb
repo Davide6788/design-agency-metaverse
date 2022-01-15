@@ -1,7 +1,14 @@
-
-<h2>Where dou you wanna start ?</h2> <br>
-
-<% @categories.each do |category| %>
-  <%= link_to category.category_name, category_path(category) %> <br>
-<% end %>
-
+<div class="container"></div>
+  <h2>Where do you wanna start ?</h2> <br>
+  <ul>
+    <% @categories.each do |category| %>
+      <li>
+        <div class="card-product flex-column">
+          <%= link_to category_path(category) do %>
+            <%= image_tag category.category_name %>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
