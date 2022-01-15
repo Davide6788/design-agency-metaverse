@@ -1,0 +1,5 @@
+<h2>Where dou you wanna start ?</h1> <br>
+
+<% @categories.each do |category| %>
+  <%= link_to category.category_name, category_path(category) %> <br>
+<% end %>
