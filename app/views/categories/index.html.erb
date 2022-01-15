@@ -1,14 +1,33 @@
 <div class="container"></div>
   <h2>Where do you wanna start ?</h2> <br>
   <ul>
-    <% @categories.each do |category| %>
       <li>
         <div class="card-product flex-column">
-          <%= link_to category_path(category) do %>
-            <%= image_tag category.category_name %>
+          <%= link_to category_path(1) do %>
+           <img src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257180/development/kitchen_f7tn51.png" alt="test">
           <% end %>
         </div>
       </li>
-    <% end %>
+      <li>
+        <div class="card-product flex-column">
+          <%= link_to category_path(2) do %>
+           <img src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257179/development/desk_eqwtlk.png" alt="test">
+          <% end %>
+        </div>
+      </li>
+      <li>
+        <div class="card-product flex-column">
+          <%= link_to category_path(3) do %>
+           <img src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257179/development/bedroom_za5hr7.png" alt="test">
+          <% end %>
+        </div>
+      </li>
+      <li>
+        <div class="card-product flex-column">
+          <%= link_to category_path(4) do %>
+           <img src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257181/development/arts_crafts_fhtcwj.png" alt="test">
+          <% end %>
+        </div>
+      </li>
   </ul>
 </div>
