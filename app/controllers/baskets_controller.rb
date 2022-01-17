@@ -11,26 +11,14 @@ class BasketsController < ApplicationController
     @basket = Basket.find(params[:id])
     @basket.paid = true
     @basket.update(basket_params)
-    redirect_to paid_baskets_path
+    redirect_to pending_baskets_path
   end
 
   def pending
     @baskets = Basket.where(paid: false, user_id: current_user)
   end
 
- # def pay
-  #  @basket = Basket.find(params[:id])
-   # if @basket.save
-    #  @basket.paid = true
-     # redirect_to paid_baskets_path
-   # else
-    #  redirect_to nfts_path
-   # end
- # end
-
   def show
-    # @nft = Nft.find(params[:nft_id])
-    # @basket.nft = @nft
     @basket = Basket.find(params[:id])
   end
 
@@ -46,7 +34,7 @@ class BasketsController < ApplicationController
     @basket.user = current_user
     @basket.paid = false
     if @basket.save
-      redirect_to basket_path(@basket)
+      redirect_to pending_baskets_path
     else
       redirect_to nfts_path
     end

@@ -1,5 +1,9 @@
 <ul>
   <% @baskets.each do |basket| %>
-    <li><%= basket.id %></li>
+    <li><%= basket.nft.title %>
+    <%= form_for(basket) do |f| %>
+      <%= f.hidden_field :paid, value: true %>
+      <%= f.submit "Pay now" %></li>
+    <% end %>
   <% end %>
 </ul>
