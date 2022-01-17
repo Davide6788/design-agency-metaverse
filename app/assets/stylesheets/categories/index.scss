@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+#grid {
+  width: 600px;
+  height: 600px;
+  margin-left: 30px;
+}
+
+.card-product {
+  margin: 35px;
+  margin-right: 65px;
+}
+
+#category-card {
+  height: 280px;
+}
+
+#first-group {
+  display: flex;
+}
+
+#second-group {
+  display: flex;
+}
+
+h2 {
+  font-size: 80px;
+  font-family: "roboto", sans-serif;
+  color: white;
+  margin-right: 30px;
+}
+
+.start-h2 {
+  color: #5234ca;
+  margin: 15px;
+}
+
+.h2-bottom {
+  margin-left: 125px;
+}

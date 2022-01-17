@@ -1,15 +1,36 @@
 
+  <div class="flex-1">
+    <div class="box-1">
+      <h2 class="h2_nft_show"><%= @nft.title %></h2>
+    </div>
+
+
+    <div class="box-2">
+      <%= cl_image_tag @nft.photo.key, height: 300, width: 400, crop: :fill, class: "image_nft" %>
+    </div>
+
+     <div class="box-3">
+      <p class= "price"><%= @nft.price %>€</p>
+    </div>
+
+    </div>
+
+
+  <div class="flex-2">
+  <div class="box-4">
+      <br>
+        <p class="description" ><%= @nft.description %></p>
+      <br>
+  </div>
 
 
 
-<div class="container nft-list-filtered-by-category">
-  <h2><%= @nft.title %></h2>
-  <br>
-  <h2><%= @nft.description %></h2>
-  <br>
-  <%= cl_image_tag @nft.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="box-5">
 
   <%= simple_form_for [@nft, @basket] do |f| %>
           <%= f.hidden_field :paid, value: true %>
-          <%= f.submit "Add to my Basket" %>
+          <%= f.submit "Add to my Basket" , class:"basket_button" %>
+    <%= image_tag "basket_nft_show.svg", alt: "arrow", width: 40, class:"basket_nft_show" %>
   <% end %>
+</div>
+</div>

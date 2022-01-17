@@ -1,33 +1,53 @@
-<div class="container"></div>
-  <h2>Where do you wanna start ?</h2> <br>
-  <ul>
-      <li>
-        <div class="card-product flex-column">
-          <%= link_to category_path(1) do %>
-           <img src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257180/development/kitchen_f7tn51.png" alt="test">
-          <% end %>
-        </div>
-      </li>
-      <li>
-        <div class="card-product flex-column">
-          <%= link_to category_path(2) do %>
-           <img src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257179/development/desk_eqwtlk.png" alt="test">
-          <% end %>
-        </div>
-      </li>
-      <li>
-        <div class="card-product flex-column">
-          <%= link_to category_path(3) do %>
-           <img src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257179/development/bedroom_za5hr7.png" alt="test">
-          <% end %>
-        </div>
-      </li>
+<div class="container">
+  <div class="title-h2">
+    <h2>Where do you<br/><span class="h2-bottom">wanna<span class="start-h2">start</span> ?</h2> <br></span>
+  </div>
+<ul>
+  <div id="grid">
+    <div id="first-group">
+      <div id="item1">
+        <li>
+          <div class="card-product flex-column">
+            <%= link_to category_path(1) do %>
+            <img id= "category-card" src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257180/development/kitchen_f7tn51.png" alt="test">
+            <% end %>
+          </div>
+        </li>
+      </div>
+    <div id="item2">
+        <li>
+         <div class="card-product flex-column">
+            <%= link_to category_path(2) do %>
+            <img id= "category-card" src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257179/development/desk_eqwtlk.png" alt="test" >
+            <% end %>
+          </div>
+        </li>
+      </div>
+    </div>
+
+        <div id="second-group">
+
+
+    <div id="item3">
       <li>
         <div class="card-product flex-column">
           <%= link_to category_path(4) do %>
-           <img src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257181/development/arts_crafts_fhtcwj.png" alt="test">
+          <img id= "category-card" src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257181/development/arts_crafts_fhtcwj.png" alt="test">
           <% end %>
         </div>
       </li>
-  </ul>
+    </div>
+
+      <div id="item4">
+        <li>
+          <div class="card-product flex-column">
+            <%= link_to category_path(3) do %>
+            <img id= "category-card" src="https://res.cloudinary.com/df0rbvi7s/image/upload/v1642257179/development/bedroom_za5hr7.png" alt="test" >
+            <% end %>
+          </div>
+        </li>
+      </div>
+
+  </div>
+</ul>
 </div>
