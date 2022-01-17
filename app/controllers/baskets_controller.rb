@@ -9,9 +9,16 @@ class BasketsController < ApplicationController
 
   def update
     @basket = Basket.find(params[:id])
-    @basket.paid = true
-    @basket.update(basket_params)
+    @basket.update(paid: true)
     redirect_to pending_baskets_path
+  end
+
+  def pay_all
+    @baskets = Basket.where(paid: false, user_id: current_user)
+    @baskets.each do |basket|
+      basket.update(paid: true)
+    end
+    redirect_to paid_baskets_path
   end
 
   def pending

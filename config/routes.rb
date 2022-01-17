@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :baskets do
     collection do
       get :paid, :pending
+      patch :pay_all
     end
   end
 
