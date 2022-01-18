@@ -1,6 +1,6 @@
 <div class="container nft-list-filtered-by-category">
   <h1>
-    <%= @category.category_name %>
+    <%= @category.category_name.capitalize %>
   </h1>
   <ul>
     <div class="container nft-product-cards display-grid">
@@ -19,4 +19,7 @@
       <% end %>
     </div>
   </ul>
+  <h3>
+    <%= link_to "Back to Categories", categories_path %>
+  </h3>
 </div>

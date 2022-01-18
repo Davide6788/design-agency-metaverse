@@ -5,12 +5,14 @@ Rails.application.routes.draw do
   resources :baskets do
     collection do
       get :paid, :pending
+      patch :pay_all
     end
   end
 
+
   resources :categories, only: [:index, :show]
 
-  resources :baskets, only: [:show, :index, :update]
+  resources :baskets, only: [:show, :index, :update, :destroy]
 
   resources :nfts do
     resources :baskets, only: [:create, :new]

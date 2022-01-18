@@ -1,16 +1,24 @@
-
-<h2>Basket's show</h2>
-<br>
-<%= @basket.nft.title %> <br>
-<%= @basket.nft.price %> <br>
-# #cl_image_tag @basket.nft.photo, height: 300, width: 400, crop: :fill
-
-<br>
-<br>
-
-<%= form_for(@basket) do |f| %>
-  <%= f.hidden_field :paid, value: true %>
-  <%= f.submit "Pay now" %>
-<% end %>
-
-link_to "Pay", basket_path(@basket), method: :patch
+<div class="container list-inline basket-show">
+  <div class="basket-nft-show col-6 list-inline-item">
+    <div class="basket-nft-show-top">
+      <h1><%= @basket.nft.title %></h1>
+      <p><%= @basket.nft.description %></p>
+      <% if @basket.nft.photo.key != nil %>
+        <%= cl_image_tag @basket.nft.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag "Image_not_available" %>
+      <% end %>
+    </div>
+    <div class="basket-nft-show-bottom list-inline d-flex justify-content-between">
+      <p class="list-inline-item">1 item</p>
+      <p class="list-inline-item">$<%= @basket.nft.price %></p>
+    </div>
+  </div>
+  <div class="basket-pay col-5 list-inline-item">
+    <%= image_tag "Groupbasket-big.svg", alt: "arrow", class:"basket_logo" %>
+    <%= form_for(@basket) do |f| %>
+      <%= f.hidden_field :paid, value: true %>
+      <%= f.submit "Pay now", class: "submit-button" %>
+    <% end %>
+  </div>
+</div>
