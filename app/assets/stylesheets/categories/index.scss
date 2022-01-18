@@ -1,10 +1,10 @@
-.container {
+.container_category_index {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center;
 }
-#grid {
+#grid_category_index {
   width: 600px;
   height: 600px;
   margin-left: 30px;
@@ -27,7 +27,7 @@
   display: flex;
 }
 
-h2 {
+.h2-all {
   font-size: 80px;
   font-family: "roboto", sans-serif;
   color: white;
