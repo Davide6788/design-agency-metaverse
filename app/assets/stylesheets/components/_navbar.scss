@@ -44,11 +44,15 @@ nav {
   color: #5234ca;
 }
 
-.basket_logo {
+.nav-item .basket_logo {
   margin-right: 50px;
 }
 
-.logo img {
+img.logo  {
   width: 60px;
   vertical-align: middle;
+}
+
+.edit-basket {
+  margin-top: 40px;
 }
