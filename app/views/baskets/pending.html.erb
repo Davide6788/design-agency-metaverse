@@ -1,5 +1,10 @@
 <ul>
   <% @baskets.each do |basket| %>
-    <li><%= basket.id %></li>
+    <li><%= basket.nft.title %>
+    <%= form_for(basket) do |f| %>
+      <%= f.submit "Pay now" %></li>
+    <% end %>
   <% end %>
 </ul>
+
+<%= link_to "Buy All", pay_all_baskets_path, method: :patch, :class => 'btn btn-outline-light my-2 my-sm-0 '%>
