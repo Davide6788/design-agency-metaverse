@@ -12,14 +12,19 @@
 @import "components/index";
 @import "pages/index";
 @import "categories/show";
+
+@import "categories/index";
+@import "nfts/show";
+
 @import "baskets/paid";
 @import "baskets/show";
 @import "baskets/pending";
+
 
 .container {
   padding: 0;
 }
 
 body {
-  background-color: #211F1F;
+  background-color: #211f1f;
 }
