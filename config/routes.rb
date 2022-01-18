@@ -9,9 +9,10 @@ Rails.application.routes.draw do
     end
   end
 
+
   resources :categories, only: [:index, :show]
 
-  resources :baskets, only: [:show, :index, :update]
+  resources :baskets, only: [:show, :index, :update, :destroy]
 
   resources :nfts do
     resources :baskets, only: [:create, :new]

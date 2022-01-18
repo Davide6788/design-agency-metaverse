@@ -1,10 +1,20 @@
-<ul>
-  <% @baskets.each do |basket| %>
-    <li><%= basket.nft.title %>
-    <%= form_for(basket) do |f| %>
-      <%= f.submit "Pay now" %></li>
-    <% end %>
-  <% end %>
-</ul>
-
-<%= link_to "Buy All", pay_all_baskets_path, method: :patch, :class => 'btn btn-outline-light my-2 my-sm-0 '%>
+<div class="container">
+  <div class="basket-pending-index d-flex">
+    <ul class="basket-pending-index-grid col-7">
+      <% @baskets.each do |basket| %>
+        <li class="basket-pending-index-grid-nft-card d-flex flex-column justify-content-center">
+          <%= link_to basket.nft.title, basket_path(basket), class: "d-flex justify-content-center" %>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%= form_for(basket) do |f| %>
+            <%= f.submit "Pay now", class: "pay-now-button d-flex justify-content-center" %></li>
+        <% end %>
+          <%= link_to "Delete #{basket.nft.title}",
+            basket_path(basket),
+            method: :delete %>
+      <% end %>
+    </ul>
+    <div class="basket-pending-pay-all col-5 d-flex justify-content-center align-items-center">
+      <%= link_to "Buy All", pay_all_baskets_path, method: :patch, :class => 'btn btn-outline-light my-2 my-sm-0 '%>
+    </div>
+  </div>
+</div>

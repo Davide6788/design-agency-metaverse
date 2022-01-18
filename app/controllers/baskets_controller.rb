@@ -50,6 +50,7 @@ class BasketsController < ApplicationController
   def destroy
     @basket = Basket.find(params[:id])
     @basket.destroy
+    redirect_to pending_baskets_path
   end
 
   private
