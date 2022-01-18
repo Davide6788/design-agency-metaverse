@@ -8,6 +8,9 @@
           <%= form_for(basket) do |f| %>
             <%= f.submit "Pay now", class: "pay-now-button d-flex justify-content-center" %></li>
         <% end %>
+          <%= link_to "Delete #{basket.nft.title}",
+            basket_path(basket),
+            method: :delete %>
       <% end %>
     </ul>
     <div class="basket-pending-pay-all col-5 d-flex justify-content-center align-items-center">
