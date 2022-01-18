@@ -1,6 +1,9 @@
 <ul>
   <% @baskets.each do |basket| %>
     <li><%= basket.nft.title %>
+    <%= link_to "Delete #{basket.nft.title}",
+            basket_path(basket),
+            method: :delete %>
     <%= form_for(basket) do |f| %>
       <%= f.submit "Pay now" %></li>
     <% end %>
