@@ -1,5 +1,4 @@
 class NftsController < ApplicationController
-
   def index
     @nft = Nft.all
   end
@@ -34,10 +33,10 @@ class NftsController < ApplicationController
     @nft.destroy
   end
 
+
   private
 
   def nft_params
     params.require(:nft).permit(:title, :description, :price, :category_id, :photo)
   end
-
 end

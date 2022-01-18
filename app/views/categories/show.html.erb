@@ -1,10 +1,20 @@
+<%= form_tag category_path(@category), method: :get do %>
+  <%= text_field_tag :query,
+    params[:id],
+    class: "form-control",
+    placeholder: "Find an NFT"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+
 <div class="container nft-list-filtered-by-category">
   <h1>
     <%= @category.category_name %>
   </h1>
   <ul>
     <div class="container nft-product-cards display-grid">
-      <% Nft.where(category_id: 1).each do |nft| %>
+      <% @nfts.each do |nft| %>
         <li>
           <div class="card-product flex-column">
             <%= link_to nft_path(nft) do %>
