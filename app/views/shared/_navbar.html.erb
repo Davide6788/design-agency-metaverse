@@ -1,11 +1,17 @@
-  <nav class="navbar">
+<nav class="navbar">
     <a href="https://design-agency-metaverse-703.herokuapp.com/" class="logo">
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/meta.png" alt="freeCodeCamp logo">
     </a>
+  <ul class="nav-links" id="categories">
+    <li class="nav-item"><%= link_to "KITCHEN", category_path(1), class:"nav-link" %></li>
+    <li class="nav-item"><%= link_to "BEDROOM", category_path(2), class:"nav-link" %></li>
+    <li class="nav-item"><%= link_to "DESK", category_path(3), class:"nav-link" %></li>
+    <li class="nav-item"><%= link_to "ARTS&CRAFTS", category_path(4), class:"nav-link" %></li>
+  </ul>
     <ul class="nav-links">
       <li class="nav-item"><%= link_to "MY BASKET", pending_baskets_path %></li>
       <li class="nav-item"><%= image_tag "akar-icons_basket.svg", alt: "arrow", class:"basket_logo",width: 40 %></li>
       <li class="nav-item"><%= link_to Basket.where(paid: false, user_id: current_user).count, pending_baskets_path %></li>
       <li class="nav-item"><a href="#">Sign in</a></li>
     </ul>
-  </nav>
+</nav>
