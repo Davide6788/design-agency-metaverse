@@ -1,7 +1,5 @@
 <nav class="navbar">
-    <a href="https://design-agency-metaverse-703.herokuapp.com/">
-      <img class="logo-navbar" src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/meta.png" alt="freeCodeCamp logo">
-    </a>
+    <%= link_to image_tag("https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/meta.png", alt: "meta logo", class: "logo-navbar"), root_path, class: "logo" %>
   <ul class="nav-links" id="categories">
     <li class="nav-item"><%= link_to "KITCHEN", category_path(1), class:"nav-link" %></li>
     <li class="nav-item"><%= link_to "BEDROOM", category_path(2), class:"nav-link" %></li>
