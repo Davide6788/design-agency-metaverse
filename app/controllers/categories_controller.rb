@@ -8,7 +8,8 @@ class CategoriesController < ApplicationController
     if params[:query].present?
       @nfts = @category.nfts.where(title: params[:query])
     else
-      @nfts = @category.nfts
+      # raise
+      @nfts = @category.nfts.where(paid: false)
     end
   end
 end

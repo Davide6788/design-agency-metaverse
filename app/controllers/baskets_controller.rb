@@ -10,6 +10,8 @@ class BasketsController < ApplicationController
   def update
     @basket = Basket.find(params[:id])
     @basket.update(paid: true)
+    @nft = Nft.find(@basket.nft_id)
+    @nft.update(paid: true)
     redirect_to pending_baskets_path
   end
 
