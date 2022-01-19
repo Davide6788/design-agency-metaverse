@@ -18,7 +18,7 @@
         <li>
           <div class="card-product flex-column">
             <%= link_to nft_path(nft) do %>
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+              <%= cl_image_tag nft.photo.key %>
             <% end %>
             <div class="card-product-infos">
               <h2><%= link_to nft.title, nft_path(nft) %></h2>
