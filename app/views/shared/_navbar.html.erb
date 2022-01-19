@@ -10,6 +10,11 @@
       <li class="nav-item"><%= link_to "MY BASKET", pending_baskets_path %></li>
       <li class="nav-item"><%= image_tag "akar-icons_basket.svg", alt: "arrow", class:"basket_logo",width: 40 %></li>
       <li class="nav-item"><%= link_to Basket.where(paid: false, user_id: current_user).count, pending_baskets_path %></li>
-      <li class="nav-item"><a href="#">Sign in</a></li>
+      <% if user_signed_in? %>
+        <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li class="nav-item"><%= link_to "Sign in", new_user_session_path %></li>
+      <% end %>
+
     </ul>
 </nav>
