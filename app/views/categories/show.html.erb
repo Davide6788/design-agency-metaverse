@@ -1,6 +1,6 @@
 <%= form_tag category_path(@category), method: :get do %>
   <%= text_field_tag :query,
-    params[:id],
+    params[:query],
     class: "form-control",
     placeholder: "Find an NFT"
   %>
