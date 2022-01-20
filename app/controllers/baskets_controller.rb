@@ -19,6 +19,8 @@ class BasketsController < ApplicationController
     @baskets = Basket.where(paid: false, user_id: current_user)
     @baskets.each do |basket|
       basket.update(paid: true)
+      @nft = Nft.find(basket.nft_id)
+      nft.update(paid: true)
     end
     redirect_to paid_baskets_path
   end
