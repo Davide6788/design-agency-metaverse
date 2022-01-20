@@ -25,8 +25,8 @@
               <%= cl_image_tag nft.photo.key %>
             <% end %>
             <div class="card-product-infos">
-              <h2><%= link_to nft.title, nft_path(nft) %></h2>
-              <p>$<%= nft.price %></p>
+              <h2><%= link_to nft.title, nft_path(nft), id: "title" %></h2>
+              <p id="price">₿ <%= nft.price %></p>
             </div>
           </div>
         </li>

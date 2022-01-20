@@ -4,7 +4,7 @@
       <% @baskets.each do |basket| %>
         <li class="basket-pending-index-grid-nft-card d-flex flex-column justify-content-center">
           <%= link_to basket.nft.title, basket_path(basket), class: "d-flex justify-content-center" %>
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%= cl_image_tag basket.nft.photo.key %>
           <%= form_for(basket) do |f| %>
             <%= f.submit "Pay now", method: :patch, class: "pay-now-button d-flex justify-content-center" %>
           <% end %>

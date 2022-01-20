@@ -31,6 +31,7 @@ a {
   padding: 50px;
 }
 
+
 .form-control {
   margin: auto;
   border: 1px solid #dddddd;
@@ -45,4 +46,14 @@ a {
   background: transparent;
   border: none !important;
   font-size: 0;
+
+#price {
+  color: white;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+#title {
+  color: white;
+  font-weight: 800;
 }
