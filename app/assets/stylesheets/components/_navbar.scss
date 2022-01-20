@@ -22,6 +22,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 0;
 }
 
 .logo-navbar {
@@ -49,7 +50,7 @@ nav {
 
 
 .nav-item .basket_logo {
-  margin-right: 50px;
+  margin-right: 5px;
 }
 
 .logo-navbar  {
@@ -59,4 +60,12 @@ nav {
 
 .edit-basket {
   margin-top: 40px;
+}
+
+.nav-item-dropdown {
+  list-style: none;
+}
+
+.dropdown-item {
+  color: #5234ca;
 }
