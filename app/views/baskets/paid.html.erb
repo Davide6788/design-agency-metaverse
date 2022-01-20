@@ -9,7 +9,7 @@
         <li>
           <div class="card-product flex-column">
             <%= link_to nft_path(basket.nft) do %>
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+              <%= cl_image_tag basket.nft.photo.key %>
             <% end %>
             <div class="card-product-infos">
               <h2><%= link_to basket.nft.title, nft_path(basket.nft) %></h2>
