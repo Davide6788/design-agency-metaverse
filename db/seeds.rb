@@ -34,7 +34,7 @@ nft = Nft.create!(
   user_id: 1
 )
 
-nft.photo.attach(io: File.open("app/assets/images/seedpics/pan.jpg"), filename: "pan.jpg", content_type: "image/jpeg")
+nft.photo.attach(io: File.open("app/assets/images/pan.jpg"), filename: "pan.jpg", content_type: "image/jpeg")
 
 # nft = Nft.create!(
 #   title: "Stove",
