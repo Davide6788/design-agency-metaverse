@@ -1,10 +1,10 @@
 <nav class="navbar">
     <%= link_to image_tag("https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/meta.png", alt: "meta logo", class: "logo-navbar"), root_path, class: "logo" %>
   <ul class="nav-links" id="categories">
-    <li class="nav-item"><%= link_to "KITCHEN", category_path(1), class:"nav-link" %></li>
-    <li class="nav-item"><%= link_to "BEDROOM", category_path(2), class:"nav-link" %></li>
-    <li class="nav-item"><%= link_to "DESK", category_path(3), class:"nav-link" %></li>
-    <li class="nav-item"><%= link_to "ARTS&CRAFTS", category_path(4), class:"nav-link" %></li>
+    <li class="nav-item-underlined active"><%= link_to "KITCHEN", category_path(1), class:"nav-link" %></li>
+    <li class="nav-item-underlined"><%= link_to "BEDROOM", category_path(2), class:"nav-link" %></li>
+    <li class="nav-item-underlined"><%= link_to "DESK", category_path(3), class:"nav-link" %></li>
+    <li class="nav-item-underlined"><%= link_to "ARTS&CRAFTS", category_path(4), class:"nav-link" %></li>
   </ul>
   <ul class="nav-links">
       <li class="nav-item"><%= link_to "MY BASKET", pending_baskets_path %></li>

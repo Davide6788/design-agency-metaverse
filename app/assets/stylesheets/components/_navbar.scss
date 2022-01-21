@@ -74,3 +74,20 @@ a.dropdown-item  {
 a.dropdown-item:hover  {
   color: #5234ca;
 }
+
+.nav-item-underlined a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-item-underlined:hover a {
+  color: #5234ca;
+}
+
+.nav-item-underlined.active a {
+  opacity: 1;
+  border-bottom: 3px solid #5234ca;
+}
