@@ -5,12 +5,8 @@
         <li class="basket-pending-index-grid-nft-card d-flex flex-column justify-content-center">
           <%= link_to basket.nft.title, basket_path(basket), class: "d-flex justify-content-center" %>
           <%= cl_image_tag basket.nft.photo.key %>
-          <%= form_for(basket) do |f| %>
-            <%= f.submit "Buy", method: :patch, class: "pay-now-button" %>
-          <% end %>
-          <%= link_to "Delete #{basket.nft.title}",
-            basket_path(basket),
-            method: :delete %>
+          <%= link_to "Buy", basket_path(basket), method: :patch, :class => 'btn-pay-now'%>
+          <%= link_to "Remove", basket_path(basket), method: :delete, :class => 'btn-remove'%>
         </li>
       <% end %>
     </ul>
