@@ -6,7 +6,7 @@
           <%= link_to basket.nft.title, basket_path(basket), class: "d-flex justify-content-center" %>
           <%= cl_image_tag basket.nft.photo.key %>
           <%= form_for(basket) do |f| %>
-            <%= f.submit "Pay now", method: :patch, class: "pay-now-button d-flex justify-content-center" %>
+            <%= f.submit "Buy", method: :patch, class: "pay-now-button" %>
           <% end %>
           <%= link_to "Delete #{basket.nft.title}",
             basket_path(basket),
@@ -14,8 +14,27 @@
         </li>
       <% end %>
     </ul>
-    <div class="basket-pending-pay-all col-5 d-flex justify-content-center align-items-center">
-      <%= link_to "Buy All", pay_all_baskets_path, method: :patch, :class => 'btn btn-outline-light my-2 my-sm-0 '%>
+    <div>
+      <div class="checkout-card">
+        <ul>
+            <% @baskets.each do |basket| %>
+              <li>
+                <div class="item-price">
+                  <div><%= basket.nft.title %>:</div>
+                  <div>₿ <%=basket.nft.price %></div>
+                </div>
+              </li>
+            <% end %>
+            <hr/>
+            <li>
+              <div class="item-price">
+                <div>TOTAL:</div>
+                <div>₿ <%= @total %></div>
+              </div>
+            </li>
+            <%= link_to "Buy All", pay_all_baskets_path, method: :patch, :class => 'btn-pay-all'%>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
