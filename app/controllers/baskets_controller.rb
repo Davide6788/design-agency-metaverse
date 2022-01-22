@@ -27,6 +27,8 @@ class BasketsController < ApplicationController
 
   def pending
     @baskets = Basket.where(paid: false, user_id: current_user)
+    @total = 0
+    @baskets.each { |basket| @total += basket.nft.price }
   end
 
   def show
