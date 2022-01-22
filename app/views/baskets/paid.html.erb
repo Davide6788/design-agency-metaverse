@@ -12,12 +12,15 @@
               <%= cl_image_tag basket.nft.photo.key %>
             <% end %>
             <div class="card-product-infos">
-              <h2><%= link_to basket.nft.title, nft_path(basket.nft) %></h2>
-              <p>$<%= basket.nft.price %></p>
+              <h2><%= link_to basket.nft.title, nft_path(basket.nft), id: "title"  %></h2>
+              <p id="price">₿ <%= basket.nft.price %></p>
             </div>
           </div>
         </li>
       <% end %>
     </div>
   </ul>
+  <h3>
+    <%= link_to "Buy more NFTs", categories_path %>
+  </h3>
 </div>
