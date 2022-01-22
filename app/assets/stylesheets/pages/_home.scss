@@ -7,7 +7,6 @@
   background-image: asset-url("banner.png");
   background-color: #000000;
   background-size: cover;
-  height: 92vh;
   width: 100%;
   color: #eee;
   text-align: center;
@@ -18,8 +17,9 @@
 .button_png {
   width: 350px;
   margin-right: 80px;
-  margin-top: 160px;
+  margin-top: 80px;
   filter: drop-shadow(1px 1px 3px #000000);
+  padding: 35px;
 }
 
 .h1-home {
