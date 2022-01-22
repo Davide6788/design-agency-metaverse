@@ -8,6 +8,7 @@
   background-color: #000000;
   background-size: cover;
   height: 92vh;
+  width: 100%;
   color: #eee;
   text-align: center;
   padding-top: 30vh;
@@ -16,8 +17,9 @@
 
 .button_png {
   width: 350px;
-  margin-right: 100px;
-  margin-bottom: 90px;
+  margin-right: 80px;
+  margin-top: 160px;
+  filter: drop-shadow(1px 1px 3px #000000);
 }
 
 .h1-home {
@@ -28,6 +30,7 @@
   font-weight: 700;
   text-align: left;
   margin-left: 5%;
+  text-shadow: 1px 1px 3px #000000;
   margin-top: -100px;
   span {
     color: #5234ca;
