@@ -10,7 +10,7 @@
     </div>
 
      <div class="box-3">
-      <p class= "price"><%= @nft.price %> ₿</p>
+      <p class= "price">₿ <%= @nft.price %></p>
     </div>
 
     </div>
@@ -27,16 +27,17 @@
 
 <div class="box-5">
 
-<div class="basket_buton_flex">
+  <div class="basket_buton_flex">
 
-  <%= simple_form_for [@nft, @basket] do |f| %>
-          <%= f.hidden_field :paid, value: true %>
-          <%= f.submit "Add to my Basket" , class:"basket_button" %>
+    <%= simple_form_for [@nft, @basket], { html: { class: "form-button-nft-show" } } do |f| %>
+            <%= f.hidden_field :paid, value: true %>
+            <%= f.submit "Add to my Basket" , class:"basket_button" %>
   </div>
+
   <div class="logo-bouton_flex">
 
     <%= image_tag "basket_nft_show.svg", alt: "arrow", width: 40, class:"basket_nft_show" %>
-      </div>
+  </div>
 
   <% end %>
 </div>
