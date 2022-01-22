@@ -5,15 +5,6 @@ a {
   font-weight: 400;
 }
 
-.simple_form {
-  height: 60vh;
-  align-items: center;
-  input.btn {
-    margin: 0;
-  }
-}
-
-
 .form-group {
   margin: 8vh 0;
   padding: 0 15vh;
@@ -24,12 +15,16 @@ a {
 }
 
 
-#newNFTFormContent {
-  padding: 30px;
-  width: 90%;
-  position: relative;
-  padding: 0px;
+#loginFormContent {
+  // position: relative;
   text-align: center;
+  .form-group {
+    margin: 7vh 0;
+    padding: 0;
+  }
+  .simple_form {
+  height: 60vh;
+}
 }
 
 .form-inputs label {
