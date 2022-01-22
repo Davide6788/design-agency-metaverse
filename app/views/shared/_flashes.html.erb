@@ -10,3 +10,6 @@
     <%= alert %>
   </div>
 <% end %>
+<% if flash["payment"] %>
+    <div class="container col-4 payment-alert" role="alert"><p class="my-3">Payment Confirmed</p></div>
+<% end %>
