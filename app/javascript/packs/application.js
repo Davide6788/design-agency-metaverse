@@ -17,10 +17,10 @@ ActiveStorage.start()
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
-console.log('Hello world')
+
 // External imports
 import "bootstrap";
-import { underlineCategoriesNavbar } from '../components/categories';
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -28,5 +28,5 @@ import { underlineCategoriesNavbar } from '../components/categories';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  underlineCategoriesNavbar();
+
 });
