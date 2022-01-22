@@ -12,6 +12,7 @@ class BasketsController < ApplicationController
     @basket.update(paid: true)
     @nft = Nft.find(@basket.nft_id)
     @nft.update(paid: true)
+    flash["payment"] = "Payment confirmed"
     redirect_to pending_baskets_path
   end
 
@@ -22,6 +23,7 @@ class BasketsController < ApplicationController
       @nft = Nft.find(basket.nft_id)
       @nft.update(paid: true)
     end
+    flash["payment"] = "Payment confirmed"
     redirect_to paid_baskets_path
   end
 
