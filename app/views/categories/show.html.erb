@@ -1,4 +1,12 @@
-<div class="searchbar">
+
+
+
+<div class="container nft-list-filtered-by-category">
+<div class="search-bar-container">
+  <h1>
+    <%= @category.category_name.capitalize %>
+  </h1>
+  <div class="searchbar">
 <%= form_tag category_path(@category), method: :get do %>
   <%= text_field_tag :query,
     params[:query],
@@ -10,12 +18,7 @@
 
 <% end %>
 </div>
-
-
-<div class="container nft-list-filtered-by-category">
-  <h1>
-    <%= @category.category_name.capitalize %>
-  </h1>
+</div>
   <ul>
     <div class="container nft-product-cards display-grid">
       <% @nfts.each do |nft| %>
